@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《10倍成長思維》無雜訊頂尖顧問簡報 ｜ 10x Is Easier Than 2x</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1120;
+      --surface: #131c31;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --mckinsey-primary: #051c2c;
+      --mckinsey-accent: #d97706;
+      --bcg-primary: #004f32;
+      --bcg-accent: #29ba74;
+      --accenture-primary: #111827;
+      --accenture-accent: #a100ff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans TC', 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      height: 64px;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .nav-left, .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .back-btn, .download-btn, .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .back-btn {
+      background: rgba(255, 255, 255, 0.08);
+      color: #e2e8f0;
+      border: 1px solid var(--border);
+    }
+    .back-btn:hover { background: rgba(255, 255, 255, 0.15); color: #fff; }
+    .download-btn {
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      color: #fff;
+      border: none;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+    .download-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.45);
+    }
+    .action-btn {
+      background: rgba(255, 255, 255, 0.05);
+      color: #94a3b8;
+      border: 1px solid var(--border);
+    }
+    .action-btn:hover, .action-btn.active {
+      color: #38bdf8;
+      border-color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    /* Deck View Container */
+    .deck-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+    }
+
+    .slide-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      aspect-ratio: 16 / 9;
+      background: #ffffff;
+      color: #1e293b;
+      border-radius: 16px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      animation: fadeIn 0.25s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.99); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Theme Styles inside Slide */
+    .slide-wrapper.theme-mckinsey {
+      --slide-primary: #051c2c;
+      --slide-secondary: #1e3a8a;
+      --slide-accent: #d97706;
+      --slide-card-bg: #f8fafc;
+      --slide-border: #cbd5e1;
+      --slide-text: #1f2937;
+      --slide-muted: #64748b;
+    }
+    .slide-wrapper.theme-bcg {
+      --slide-primary: #004f32;
+      --slide-secondary: #177b57;
+      --slide-accent: #29ba74;
+      --slide-card-bg: #f3f4f6;
+      --slide-border: #d1d5db;
+      --slide-text: #1f2937;
+      --slide-muted: #6b7280;
+    }
+    .slide-wrapper.theme-accenture {
+      --slide-primary: #111827;
+      --slide-secondary: #6b21a8;
+      --slide-accent: #a100ff;
+      --slide-card-bg: #f9fafb;
+      --slide-border: #e2e8f0;
+      --slide-text: #0f172a;
+      --slide-muted: #64748b;
+    }
+
+    /* Slide Header */
+    .slide-header {
+      padding: 24px 36px 14px;
+      border-bottom: 2px solid var(--slide-border);
+    }
+    .slide-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .slide-tags {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--slide-accent);
+      letter-spacing: 0.5px;
+    }
+    .slide-page-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--slide-muted);
+      background: rgba(0, 0, 0, 0.05);
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+    .slide-title {
+      font-size: 23px;
+      font-weight: 900;
+      color: var(--slide-primary);
+      line-height: 1.35;
+      margin-bottom: 4px;
+    }
+    .slide-subtitle {
+      font-size: 13.5px;
+      color: var(--slide-muted);
+      font-weight: 500;
+    }
+
+    /* Slide Body */
+    .slide-body {
+      flex: 1;
+      padding: 24px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Slide Footer */
+    .slide-footer {
+      padding: 10px 36px;
+      border-top: 1px solid #f1f5f9;
+      font-size: 11.5px;
+      color: var(--slide-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fafbfc;
+    }
+
+    /* Cover Slide */
+    .cover-slide {
+      background: linear-gradient(135deg, #051c2c 0%, #0a2e4c 60%, #1e3a8a 100%);
+      color: #ffffff;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px 64px;
+      position: relative;
+    }
+    .cover-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(217, 119, 6, 0.25);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: 1px;
+    }
+    .cover-title {
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+    .cover-subtitle {
+      font-size: 20px;
+      color: #cbd5e1;
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 850px;
+      margin-bottom: 36px;
+    }
+    .cover-footer-info {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    /* Parallel Layout */
+    .parallel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      height: 100%;
+      align-items: stretch;
+    }
+    .parallel-card {
+      background: var(--slide-card-bg);
+      border: 1.5px solid var(--slide-border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .parallel-card.highlight {
+      border-color: var(--slide-accent);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      background: #ffffff;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--slide-primary);
+      margin-bottom: 12px;
+      line-height: 1.35;
+      white-space: pre-line;
+    }
+    .card-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--slide-text);
+    }
+    .card-list li {
+      position: relative;
+      padding-left: 18px;
+      line-height: 1.45;
+    }
+    .card-list li::before {
+      content: '•';
+      position: absolute;
+      left: 4px;
+      color: var(--slide-accent);
+      font-weight: bold;
+    }
+
+    /* Opposition Layout */
+    .opposition-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      height: 100%;
+    }
+    .opposition-headers {
+      display: grid;
+      grid-template-columns: 140px 1fr 1fr;
+      gap: 16px;
+    }
+    .opp-col-title {
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 800;
+      text-align: center;
+    }
+    .opp-title-a {
+      background: #f1f5f9;
+      color: #475569;
+    }
+    .opp-title-b {
+      background: rgba(41, 186, 116, 0.15);
+      color: #004f32;
+      border: 1px solid var(--slide-accent);
+    }
+    .opposition-row {
+      display: grid;
+      grid-template-columns: 140px 1fr 1fr;
+      gap: 16px;
+      background: var(--slide-card-bg);
+      border: 1px solid var(--slide-border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      align-items: center;
+    }
+    .opp-dim-label {
+      font-weight: 800;
+      font-size: 13.5px;
+      color: var(--slide-primary);
+    }
+    .opp-dim-content {
+      font-size: 13px;
+      line-height: 1.45;
+      color: var(--slide-text);
+    }
+    .opp-dim-content.focus {
+      font-weight: 600;
+      color: #004f32;
+    }
+
+    /* One to One Layout */
+    .one-to-one-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 24px;
+      height: 100%;
+      align-items: center;
+    }
+    .chart-area {
+      background: var(--slide-card-bg);
+      border: 1px solid var(--slide-border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .bar-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .bar-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--slide-text);
+    }
+    .bar-track {
+      height: 24px;
+      background: #e2e8f0;
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+    }
+    .bar-fill {
+      height: 100%;
+      background: #94a3b8;
+      border-radius: 6px;
+      transition: width 0.6s ease;
+    }
+    .bar-fill.highlight {
+      background: var(--slide-accent);
+    }
+    .callout-box {
+      background: #fff;
+      border: 2px solid var(--slide-accent);
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .callout-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--slide-secondary);
+    }
+    .callout-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+
+    /* Combined Tree Layout */
+    .tree-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      height: 100%;
+      justify-content: center;
+    }
+    .tree-top {
+      background: var(--slide-primary);
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .tree-branches {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .tree-branch {
+      background: var(--slide-card-bg);
+      border: 1.5px solid var(--slide-border);
+      border-radius: 12px;
+      padding: 18px;
+    }
+    .tree-branch-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--slide-secondary);
+      border-bottom: 2px solid var(--slide-accent);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .tree-facts {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    /* Chain Layout */
+    .chain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      height: 100%;
+      align-items: center;
+      position: relative;
+    }
+    .chain-card {
+      background: var(--slide-card-bg);
+      border: 1.5px solid var(--slide-border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 100%;
+    }
+    .chain-order {
+      align-self: flex-start;
+      background: var(--slide-accent);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .chain-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--slide-primary);
+    }
+    .chain-desc {
+      font-size: 13px;
+      color: var(--slide-text);
+      line-height: 1.5;
+      white-space: pre-line;
+    }
+
+    /* Comparison Layout */
+    .comp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      gap: 16px;
+      height: 100%;
+      align-items: stretch;
+    }
+    .comp-box {
+      border: 1.5px solid var(--slide-border);
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: var(--slide-card-bg);
+    }
+    .comp-box.center {
+      background: #ffffff;
+      border: 2px solid var(--slide-accent);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+    .comp-title {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--slide-primary);
+      text-align: center;
+      white-space: pre-line;
+    }
+
+    /* McKinsey Matrix Layout */
+    .mckinsey-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 10px;
+      height: 100%;
+    }
+    .mckinsey-table th {
+      background: var(--slide-primary);
+      color: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 800;
+      text-align: center;
+      white-space: pre-line;
+    }
+    .mckinsey-table td.dim {
+      background: #e2e8f0;
+      color: var(--slide-primary);
+      font-weight: 800;
+      font-size: 13px;
+      padding: 14px;
+      border-radius: 8px;
+      width: 160px;
+      vertical-align: middle;
+      white-space: pre-line;
+    }
+    .mckinsey-table td.cell {
+      background: var(--slide-card-bg);
+      border: 1px solid var(--slide-border);
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      line-height: 1.45;
+      vertical-align: middle;
+    }
+
+    /* BCG Matrix Layout */
+    .bcg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 14px;
+      height: 100%;
+    }
+    .bcg-quad {
+      border: 1.5px solid var(--slide-border);
+      background: var(--slide-card-bg);
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .bcg-quad.focus {
+      background: #ffffff;
+      border: 2px solid var(--slide-accent);
+      box-shadow: 0 8px 24px rgba(41, 186, 116, 0.15);
+    }
+    .bcg-quad-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--slide-primary);
+    }
+    .bcg-quad-desc {
+      font-size: 13px;
+      color: var(--slide-text);
+      line-height: 1.45;
+      white-space: pre-line;
+    }
+
+    /* Speaker Notes Drawer */
+    .notes-drawer {
+      width: 100%;
+      max-width: 1200px;
+      margin-top: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 24px;
+      display: none;
+      animation: fadeIn 0.2s ease-out;
+    }
+    .notes-drawer.open {
+      display: block;
+    }
+    .notes-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .notes-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .notes-content {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      gap: 20px;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .note-sec {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 12px;
+      border-radius: 8px;
+      border-left: 3px solid var(--border);
+    }
+    .note-sec.conc { border-left-color: #38bdf8; }
+    .note-sec.exp { border-left-color: #fbbf24; }
+    .note-sec.trans { border-left-color: #34d399; }
+    .note-label {
+      font-weight: 700;
+      font-size: 12px;
+      margin-bottom: 6px;
+      color: #cbd5e1;
+    }
+
+    /* Bottom Control Bar */
+    .bottom-bar {
+      height: 72px;
+      background: rgba(15, 23, 42, 0.9);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      position: sticky;
+      bottom: 0;
+      z-index: 50;
+    }
+    .page-nav-btns {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-arrow-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.2s;
+    }
+    .nav-arrow-btn:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+    .nav-arrow-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+    .progress-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .dot.active {
+      width: 24px;
+      border-radius: 4px;
+      background: #38bdf8;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .slide-wrapper { aspect-ratio: auto; min-height: 580px; }
+      .notes-content { grid-template-columns: 1fr; }
+      .comp-grid, .opposition-headers, .opposition-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <div class="nav-left">
+      <a href="index.html" class="back-btn">← 返回思維框架知識庫</a>
+      <span style="font-weight: 700; font-size: 15px; color: #cbd5e1;">《10倍成長思維》無雜訊頂尖顧問簡報</span>
+    </div>
+    <div class="nav-right">
+      <button class="action-btn" id="notesToggleBtn" onclick="toggleNotes()">🎙 演講講稿備忘</button>
+      <button class="action-btn" id="fullscreenBtn" onclick="toggleFullScreen()">⛶ 全螢幕</button>
+      <a href="assets/10倍成長思維_無雜訊顧問簡報.pptx" class="download-btn" download>⬇ 下載 .pptx 簡報</a>
+    </div>
+  </nav>
+
+  <!-- Deck Main -->
+  <main class="deck-container">
+    <div class="slide-wrapper" id="slideBox">
+      <!-- Injected by JavaScript -->
+    </div>
+
+    <!-- Notes Drawer -->
+    <div class="notes-drawer" id="notesDrawer">
+      <div class="notes-header">
+        <span class="notes-title">🎙 前 BCG / McKinsey 顧問三段式演講備忘稿 (Speaker Notes)</span>
+        <span style="font-size: 12px; color: #94a3b8;">按 [N] 鍵可隨時開關</span>
+      </div>
+      <div class="notes-content" id="notesContent">
+        <!-- Injected by JavaScript -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Bottom Control Bar -->
+  <footer class="bottom-bar">
+    <div class="page-nav-btns">
+      <button class="nav-arrow-btn" id="prevBtn" onclick="prevSlide()" title="上一頁 (←)">‹</button>
+      <span id="pageIndicator" style="font-family: 'JetBrains Mono'; font-weight: 700; font-size: 14px; min-width: 60px; text-align: center;">1 / 12</span>
+      <button class="nav-arrow-btn" id="nextBtn" onclick="nextSlide()" title="下一頁 (→)">›</button>
+    </div>
+
+    <div class="progress-dots" id="progressDots">
+      <!-- Dots injected by JS -->
+    </div>
+
+    <div style="font-size: 12px; color: #64748b;">
+      支援鍵盤 [← / →] 翻頁 ｜ [N] 講稿 ｜ [F] 全螢幕
+    </div>
+  </footer>
+
+  <script>
+    const slidesData = [{"type": "cover", "style": "mckinsey", "title": "《10倍成長思維》頂尖管理顧問精華導讀", "subtitle": "以極致減法與質變躍遷，實現十倍成長與時間自由的系統性指南", "presenter": "主講人：大衛（David Cloud 知識庫） ｜ 顧問分析報告", "date": "2026 年 10 月 ｜ Strategic Coach 策略心智模型", "speaker_notes": {"conclusion": "歡迎各位。今天我們將以頂尖顧問的視角，深度解構丹·蘇利文與班傑明·哈迪的經典著作《10倍成長思維》。", "explanation": "本書的核心哲學在於：10倍成長在數學與系統層面上，遠比2倍成長更簡單。因為2倍是過去的線性延續，而10倍則是質變與減法的智慧。", "transition": "首先，讓我們透過全書架構骨架，綜覽10倍躍遷的四大核心維度。"}}, {"type": "parallel", "style": "mckinsey", "category": "全書架構骨架", "layout_label": "版型 2：並列論法 (Parallel)", "conclusion_title": "① 主張：10倍躍遷建構於認知、時間、組織與自我四大維度的系統性重塑", "subtitle": "四大支柱相互扣連，缺一不可，共同支撐從線性競爭到質變躍遷的轉型", "cards": [{"title": "② 支柱一：認知重構\n10x vs 2x 質變思維", "points": ["打破線性努力的直覺盲區", "放棄 80% 無效工作與妥協", "建立「非要不可」十倍標準", "淘汰能量吸血鬼與最低標準"], "highlight": false}, {"title": "② 支柱二：時間重組\n年度 150 天自由日", "points": ["劃分自由日、專注日、緩衝日", "徹底斷聯休假是產出先決條件", "專注日全力投入心流關鍵產出", "以成果質量取代出勤工時考核"], "highlight": false}, {"title": "② 支柱三：組織槓桿\n打造自我管理團隊", "points": ["從單打獨鬥進化至自驅團隊", "落實 Who Not How 協同合作", "領導者專注定義 Why & What", "賦能 A-Player 團隊自主解題"], "highlight": false}, {"title": "② 支柱四：自我演進\n由未來的自己引領 ★", "points": ["擺脫過去經驗與匱乏心態束縛", "以未來十倍願景倒推當下決策", "鎖定「獨特能力 (Unique Ability)」", "在熱愛與卓越的交集處複利爆發"], "highlight": true}], "footer": "Source: Dan Sullivan & Dr. Benjamin Hardy《10x Is Easier Than 2x》全書架構解析", "speaker_notes": {"conclusion": "本頁呈現全書的四大核心支柱：認知、時間、組織與自我演進。", "explanation": "大多數人以為追求10倍需要付出5倍於2倍的努力，但事實恰好相反，只有同時在這四個維度上重塑系統，才能擺脫努力的邊際效用遞減。", "transition": "接下來，我們透過對立論法深入對比2倍思維與10倍思維的本質差異。"}}, {"type": "opposition", "style": "bcg", "category": "核心思維對照", "layout_label": "版型 6：對立論法 (Opposition)", "conclusion_title": "① 主張：2倍成長是過去的線性延續導致力竭，10倍躍遷則是質變減法開闢新局", "subtitle": "針對思考本質、努力模式、組織槓桿與身分認同四個維度進行深度對比", "side_a_title": "② 見解 A：2倍思維（線性延續／As-Is）", "side_b_title": "② 見解 B：10倍思維（質變躍遷／To-Be）★", "dimensions": [{"name": "思考本質", "side_a": "③ 以「過去」為基準，試圖在現有軌道上多做 10%~100%，延續舊有習慣", "side_b": "③ 以「未來」為起點倒推，徹底顛覆既有假設，設計全新運作系統"}, {"name": "努力模式", "side_a": "③ 加法與蠻力：增加工作時間、承擔更多雜務，保留 80% 次要事務導致過勞", "side_b": "③ 減法與聚焦：果斷捨棄 80% 低效工作與客群，極致聚焦於 20% 核心槓桿"}, {"name": "組織槓桿", "side_a": "③ 執著於「How（我該怎麼做）」：事必躬親、微觀管理、被瑣事牢牢綁死", "side_b": "③ 尋找「Who（誰能做到）」：搭建自驅互利團隊，釋放領導者時間自由"}, {"name": "身分認同", "side_a": "③ 匱乏心態與討好：滿足於「最低標準」，受困於維持現狀與安全感", "side_b": "③ 富足心態與承諾：設定「非要不可」十倍標準，與英雄同盟共創價值"}], "footer": "Source: 《10倍成長思維》第一章：十倍比兩倍更簡單 ｜ BCG 對立論法結構", "speaker_notes": {"conclusion": "2倍與10倍不是程度的差距，而是物種的差異。", "explanation": "2倍思維讓你落入紅海競爭與精力耗竭，因為每個人都在試圖『多做一點』；而10倍思維逼迫你跳脫原有賽道，透過減法過濾雜訊。", "transition": "既然10倍思維本質是減法，那麼該如何具體落實帕雷托法則？請看下一頁的一對一論法分析。"}}, {"type": "one_to_one", "style": "mckinsey", "category": "極致減法數據分析", "layout_label": "版型 1：一對一論法 (One-to-One)", "conclusion_title": "① 主張：追求10倍躍遷必須果斷淘汰80%次要努力，唯有極致聚焦20%才能突破瓶頸", "subtitle": "帕雷托法則在10倍框架下的極致演繹：80%的精力往往只貢獻20%邊際價值", "bars": [{"label": "獨特能力核心業務", "value": 80, "display": "80% ★", "highlight": true}, {"label": "次要行政與例行會議", "value": 20, "display": "20%", "highlight": false}, {"label": "妥協客群與低價訂單", "value": 15, "display": "15%", "highlight": false}, {"label": "歷史包袱與情感依戀", "value": 10, "display": "10%", "highlight": false}], "callout_title": "② 減法的反直覺智慧", "callout_points": ["遞迴淘汰機制：現在的 20% 核心，在下一輪 10 倍躍遷時將退化為必須淘汰的 80% 雜務。", "最大的阻力是情緒依戀：人們常因安全感或沉沒成本，緊抓著不再帶來成長的舊成果不放。", "質量的躍遷：減少 80% 的無效努力後，釋放出的專注力將使剩餘 20% 工作的質量提升十倍以上。"], "footer": "Source: 《10倍成長思維》第二章：若想讓成果質量提升十倍，請先放棄八成的無效努力", "speaker_notes": {"conclusion": "本頁的核心證據清楚顯示：80%的價值來自於少數20%的獨特能力活動。", "explanation": "追求10倍最艱難的不是做什麼，而是『不准做什麼』。唯有敢於向次要事務說不，才能騰出空間容納指數級的機會。", "transition": "接下來，我們要探討支撐這種極致減法的底層心態——結合論法三層金字塔。"}}, {"type": "combined_tree", "style": "mckinsey", "category": "認知心態演繹樹", "layout_label": "版型 3：結合論法 (Combined Tree)", "conclusion_title": "① 主張：唯有同時跨越心理承諾、淘汰最低標準並結盟英雄，才能實現10倍心態躍遷", "subtitle": "多個必要條件同時成立，層層推導構建不可動搖的十倍標準心態", "top_conclusion": "頂層結論：建立「非要不可 (Need/Standard)」十倍不可妥協標準，徹底擺脫線性平庸", "left_branch_title": "中層條件 1：自主設定高階底線標準", "left_branch_points": ["底層事實 1A：停止「想要 (Want)」的被動心態，想要只是沒有承諾的空想", "底層事實 1B：將目標轉化為「非要不可」，不達標準絕不妥協與退讓", "底層事實 1C：坦誠面對當下極限，主動打破舒適圈以引發結構性重組"], "right_branch_title": "中層條件 2：重構外部人際生態圈", "right_branch_points": ["底層事實 2A：果斷遠離消耗能量的關係與只談最低標準的「能量吸血鬼」", "底層事實 2B：尋找並結盟「英雄同盟 (Heroic Allies)」，實現能力互補與價值放大", "底層事實 2C：在互利關係中只提供自身獨特能力，建立高信任度的協同網絡"], "footer": "Source: 《10倍成長思維》第三章：十倍標準心態VS.最低標準心態 ｜ 麥肯錫金字塔演繹架構", "speaker_notes": {"conclusion": "要實現10倍躍遷，內部標準與外部環境必須同時升級。", "explanation": "內部把標準從『想要』拉高到『非要不可』；外部則無情清理消耗性人際，換成能彼此賦能的英雄同盟。兩者缺一不可。", "transition": "建立了十倍標準後，我們的自我認同將如何隨時間動態進化？請看第四章的連鎖路線圖。"}}, {"type": "chain", "style": "accenture", "category": "自我演進路線圖", "layout_label": "版型 4：連鎖論法 (Chain / Roadmap)", "conclusion_title": "① 主張：從過去標籤解綁到由未來自我想像引領，歷經三階段啟動獨特能力複利", "subtitle": "以因果時序鏈條展開自我重塑的關鍵旅程：解綁 ➔ 倒推 ➔ 複利", "steps": [{"order": "階段 1", "title": "② 解綁過去：告別匱乏心態", "desc": "打破「過去的我等於未來的我」的宿命論\n• 將過去經驗視為已提取的學習資源\n• 清除維持現狀的虛假安全感\n• 停止向後看，轉為向前看"}, {"order": "階段 2", "title": "② 未來倒推：定義十倍自我", "desc": "由「三年或十年後的自己」視角審視現在\n• 富足心態：相信機會與資源無限擴張\n• 明確未來自我的核心價值觀與日常標準\n• 以未來標準過濾當前所有的機會與邀請"}, {"order": "階段 3", "title": "② 能力爆發：鎖定獨特能力", "desc": "聚焦 Unique Ability 實現指數級複利\n• 卓越才能與無窮熱情的黃金交集\n• 唯有在獨特能力上，才能做到天下無敵\n• 讓其他一切領域交由專業盟友接管"}], "footer": "Source: 《10倍成長思維》第四章：擺脫過去，以「未來十倍」重新定義自我 ｜ Accenture 轉型路線圖", "speaker_notes": {"conclusion": "未來的自己不是被動等待的結果，而是主動設計的導航儀。", "explanation": "先解除過去身份的枷鎖，接著讓未來的自己給現在發號施令，最後把所有資源傾注在獨特能力上，達成不可阻擋的進化。", "transition": "然而，許多人最大的瓶頸在於時間被瑣事塞滿。丹·蘇利文提出了著名的創業家三大時間系統。"}}, {"type": "comparison", "style": "accenture", "category": "時間系統比較分析", "layout_label": "版型 7：比較論法 (Comparison)", "conclusion_title": "① 主張：自由日、專注日與緩衝日各司其職，休假不是獎勵而是高產出的先決條件", "subtitle": "剖析三大時間型態的個別特徵（差異點）以及驅動10倍轉化的共同核心（共通點）", "left_title": "① 自由日 (Free Days)\n每年 150 天徹底斷聯", "left_points": ["定義：連續 24 小時不碰任何公務、不看郵件與訊息", "目的：神經系統重置、家庭陪伴、深度睡眠與休閒", "反直覺哲學：休息是高產出的先決條件，而非獎賞"], "common_title": "③ 核心共通價值 (文氏圖交集)\n創業家時間系統 (The Entrepreneurial Time System)", "common_points": ["【全情投入原則】：在特定日子只做特定類型的事，嚴禁碎片化混雜", "【產出導向論】：徹底廢除『工時等於價值』的工業時代思維，以質變成果衡量價值", "【邊界保護機制】：提前在年度行事曆鎖定日期，讓團隊自主配合運轉"], "right_title": "① 專注日與緩衝日\n(Focus & Buffer Days)", "right_points": ["專注日：80% 時間專注於獨特能力的關鍵創造與心流產出", "緩衝日：集中處理行政雜務、團隊會議、培訓與日程籌備", "防禦作用：緩衝日吸收所有雜訊，保護專注日不受干擾"], "footer": "Source: 《10倍成長思維》第五章：每年擁有一百五十天的「自由日」 ｜ 比較論法架構", "speaker_notes": {"conclusion": "時間自由是所有自由的基石。丹·蘇利文堅持每年必須有150天以上的自由日。", "explanation": "自由日負責充能，專注日負責高槓桿產出，緩衝日負責吸收瑣事。三者分明，才能在極少的工作天數中創造極大的商業價值。", "transition": "要想騰出150天自由日，領導者必須建立自我管理團隊。讓我們看看創業家的四個進化等級。"}}, {"type": "mckinsey_flow", "style": "mckinsey", "category": "組織進化診斷矩陣", "layout_label": "版型 5：麥肯錫論法 (McKinsey Matrix)", "conclusion_title": "① 主張：跨越創業家四大成長階段，以「找人做而非自己做」建構自驅型組織", "subtitle": "橫軸呈現組織演進四大階段，縱軸深度剖析核心瓶頸與關鍵躍遷策略", "stages": ["② 階段 1：單打獨鬥\n(Solo-Operator)", "② 階段 2：任務委派\n(Delegator)", "② 階段 3：自我管理團隊\n(Self-Managing Team)", "② 階段 4：自驅擴展組織\n(Self-Multiplying)"], "rows": [{"dimension": "③ 核心瓶頸\n與角色心態", "cells": ["零工心態：萬事親力親為，個人時間即產能天花板，隨時面臨過勞", "經理人心態：微觀管理，陷入教員工 How 的無底深淵，成為組織最大瓶頸", "領導人心態：需克服對權力與掌控的執念，建立對 A-Player 的充分信任", "投資人心態：需保持崇高願景引領，防止組織僵化並激發內部創新"]}, {"dimension": "③ 關鍵躍遷策略\n(Who Not How)", "cells": ["學會花錢買回時間：聘請第一位助理，轉移重複性事務", "落實 Who Not How：只說明 Why & What，由專業人才自主制定 How", "建立願景型激勵：吸引自驅人才，賦予決策自主權與成果共享", "生態系網絡擴展：組織具備自我繁衍新事業的能力，領導者徹底自由"]}], "footer": "Source: 《10倍成長思維》第六章：打造「自我管理團隊」 ｜ McKinsey 組織診斷矩陣", "speaker_notes": {"conclusion": "從第一級到第四級，是從勞力輸出到資本與智慧槓桿的躍遷。", "explanation": "大多數創業家卡在第二級：他們以為自己在領導，其實只是在微觀管理。唯有放手讓優秀人才去想 How，組織才能邁向自我管理。", "transition": "在了解了思維、時間與組織之後，我們如何評估自己當前處於哪種策略象限？請看 BCG 四象限矩陣。"}}, {"type": "bcg_matrix", "style": "bcg", "category": "成長策略象限定位", "layout_label": "版型 8：BCG 論法 (BCG 2×2 Matrix)", "conclusion_title": "① 主張：以時間投入度與價值槓桿率雙維度，精準定位四類成長模式並聚焦10x象限", "subtitle": "融合對立論法（對角線模式對立）與比較論法（同軸模式對比），指明躍遷方向", "y_axis_label": "② 工作時間投入度 (Y)\n\n高工時／親力親為 (Y2)\n▲\n│\n▼\n低工時／高度自主 (Y1)", "x_axis_label": "◄ 低價值槓桿／線性產出 (X1)          ② 價值槓桿率與獨特能力發揮度 (X)          高價值槓桿／指數產出 (X2) ►", "quadrants": [{"title": "③ (X1Y2) 消耗泥淖象限\n(Burnout Trap)", "desc": "長時間超負荷運轉，卻都在處理低價值雜務\n• 特徵：焦慮、疲憊、缺乏自由\n• 診斷：典型的 2 倍低效努力模式", "highlight": false}, {"title": "③ (X2Y2) 專家匠人陷阱\n(Specialist Bottleneck)", "desc": "產出質量極高，但因無法授權而工時居高不下\n• 特徵：個人能力極強，但自己就是最大瓶頸\n• 診斷：卡在第 2 級委派階段，缺乏 Who", "highlight": false}, {"title": "③ (X1Y1) 線性平庸象限\n(Linear Stagnation)", "desc": "工時雖然有限，但產出平庸、缺乏核心競爭力\n• 特徵：混日子、缺乏雄心與願景\n• 與右上【10x 躍遷者】呈完全對立關係", "highlight": false}, {"title": "③ (X2Y1) 10x 躍遷者象限 ★ 策略焦點\n(10x Multiplier)", "desc": "極高價值槓桿 ＋ 極度時間自由（150天自由日）\n• 特徵：極致聚焦獨特能力、自驅團隊運轉\n• 與左上同屬高產出，但工時大幅降低（比較關係）", "highlight": true}], "footer": "Source: 《10倍成長思維》策略定位分析 ｜ BCG 2x2 Strategic Matrix", "speaker_notes": {"conclusion": "BCG矩陣清楚指出：我們的目標不是成為右上的工作狂專家，而是右下的10x躍遷者。", "explanation": "左下是消耗泥淖，右下是專家瓶頸。唯有具備高槓桿價值同時享受時間自由，才是丹·蘇利文所定義的真正成功。", "transition": "那麼，在實際落地過程中，最容易遭遇哪些斷點？我們該如何提前排查？"}}, {"type": "mckinsey_flow", "style": "mckinsey", "category": "轉型斷點診斷矩陣", "layout_label": "版型 5：麥肯錫論法 (McKinsey Matrix)", "conclusion_title": "① 主張：診斷個人與團隊面臨的認知、時間與組織三大斷點，對症導入突破對策", "subtitle": "全流程檢視轉型過程中的三大人性阻力與系統斷點，提供管顧級解決方案", "stages": ["② 斷點一：認知阻力\n（不敢設定十倍目標）", "② 斷點二：時間失控\n（無法真正落實斷聯休假）", "② 斷點三：組織恐懼\n（害怕授權與失去掌控感）"], "rows": [{"dimension": "③ 核心病徵\n(As-Is 診斷)", "cells": ["認為 10 倍目標不切實際；因害怕失敗而退回安全的 2 倍線性目標；沉溺於小修小補", "休假時依然神經緊繃看通訊軟體；把自由日當作獎賞而非行事曆第一優先；精力長期透支", "堅持『只有我自己做才能做好』；招聘聽話的執行者而非自驅的解題者；團隊缺乏擔當"]}, {"dimension": "③ 治本對策\n(To-Be 解方)", "cells": ["建立未來自我想像：認識到 10 倍目標是過濾雜訊的『過濾器』而非沉重負擔", "預先鎖定年度自由日：在每年初第一時間排定 150 天，倒逼日常工作進行 80% 減法", "實施結果導向授權：只審核成果標準與指標，賦予團隊自主選擇解決方案的權力"]}], "footer": "Source: 《10倍成長思維》實務導入診斷 ｜ McKinsey 斷點分析矩陣", "speaker_notes": {"conclusion": "大多數人在轉型10倍時失敗，不是因為智商不夠，而是遇到了這三大斷點。", "explanation": "認知上不敢想、時間上不敢歇、組織上不敢放。只要逐一對症下藥，阻力便能化為躍遷的助力。", "transition": "最後，我們將所有原則整合為具體的四步落地行動指南。"}}, {"type": "chain", "style": "accenture", "category": "實施行動路徑圖", "layout_label": "版型 4：連鎖論法 (Roadmap)", "conclusion_title": "① 主張：落地10倍思維的四步實施法：盤點、修剪、鎖定時程並尋找關鍵合作者", "subtitle": "以具體可衡量的漸進步驟，在 90 天內啟動第一輪十倍成長正向循環", "steps": [{"order": "步驟 1", "title": "② 盤點 80/20", "desc": "列出當前所有工作清單\n• 標記出消耗精力卻低價值的 80% 雜務\n• 識別讓自己充滿熱情的 20% 獨特能力\n• 找出拖慢進度的最低標準與能量吸血鬼"}, {"order": "步驟 2", "title": "② 果斷修剪淘汰", "desc": "停止向平庸事務妥協\n• 拒絕 3 項低利潤客群或非核心項目\n• 退出 2 個缺乏產出的冗長例行會議\n• 騰出至少 30% 的無干擾專注時段"}, {"order": "步驟 3", "title": "② 鎖定自由日", "desc": "重新設計年度行事曆\n• 先填滿下一季度的自由日並徹底宣告\n• 建立休假自動委派與應急 SOP\n• 體驗 3 天完全斷網帶來的神經修復"}, {"order": "步驟 4", "title": "② 尋找關鍵 Who", "desc": "啟動自驅互利網絡\n• 為每個核心難題尋找專屬能人\n• 明確傳達願景 (Why) 與驗收標準 (What)\n• 讓英雄同盟接管所有被修剪的雜務"}], "footer": "Source: 《10倍成長思維》實踐手冊 ｜ Accenture 落地實施路線圖", "speaker_notes": {"conclusion": "知易行難，這四步是啟動10倍循環的最快抓手。", "explanation": "盤點、修剪、排定自由日、尋找Who。按照這個順序前進，你將在三個月內看見人生的重大轉機。", "transition": "讓我們來到最後的總結頁，凝聚全書的核心信念。"}}, {"type": "parallel", "style": "mckinsey", "category": "總結與行動倡議", "layout_label": "版型 2：並列論法 (Parallel)", "conclusion_title": "① 主張：10倍比2倍更簡單：擁抱少而精的質變智慧，開啟自由倍增的人生新章", "subtitle": "三大核心信念匯聚成推動一生的成長飛輪，讓卓越不再伴隨過勞與耗竭", "cards": [{"title": "② 核心信念一：\n減法才是最高智慧", "points": ["成長不是收集更多負擔", "敢於捨棄 80% 才有真突破", "在少數關鍵點做到天下無敵", "以質量的飛躍取代數量的堆疊"], "highlight": false}, {"title": "② 核心信念二：\n深度充能驅動高產出 ★", "points": ["自由日是所有創造力的源泉", "徹底斷聯休假創造清晰思維", "告別工業時代的打卡贖罪心態", "以心流飽滿狀態迎接專注日"], "highlight": true}, {"title": "② 核心信念三：\n協同賦能實現全自由", "points": ["永遠問 Who 而不是苦思 How", "與英雄同盟建立深層互利網絡", "打造自我管理的自驅組織", "收穫時間、金錢、人際與目的自由"], "highlight": false}], "footer": "Source: Dan Sullivan & Dr. Benjamin Hardy《10倍成長思維》結語 ｜ McKinsey 顧問總結", "speaker_notes": {"conclusion": "各位，10倍不是一個目標，而是一個思考的濾鏡。", "explanation": "當你用10倍的眼光審視人生，所有無意義的噪音都會自動消失。記住這三大信念：做減法、休好假、找能人，你的人生將徹底改觀。", "transition": "感謝各位的聆聽，願大家都在未來自我的引領下，實現十倍成長與全面自由！"}}];
+    let currentSlide = 0;
+
+    function renderSlide(index) {
+      const s = slidesData[index];
+      const box = document.getElementById('slideBox');
+      const themeClass = 'theme-' + (s.style || 'mckinsey');
+      box.className = 'slide-wrapper ' + themeClass;
+
+      let bodyHtml = '';
+
+      if (s.type === 'cover') {
+        bodyHtml = `
+          <div class="cover-slide">
+            <span class="cover-badge">TOP CONSULTING BRIEFING ｜ ZERO-NOISE FRAMEWORK</span>
+            <h1 class="cover-title">${s.title}</h1>
+            <p class="cover-subtitle">${s.subtitle}</p>
+            <div class="cover-footer-info">
+              <span>${s.presenter}</span>
+              <span>${s.date}</span>
+            </div>
+          </div>
+        `;
+      } else {
+        let contentHtml = '';
+
+        if (s.type === 'parallel') {
+          contentHtml = `
+            <div class="parallel-grid">
+              ${s.cards.map(c => `
+                <div class="parallel-card ${c.highlight ? 'highlight' : ''}">
+                  <div class="card-title">${c.title}</div>
+                  <ul class="card-list">
+                    ${c.points.map(p => `<li>${p}</li>`).join('')}
+                  </ul>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        } else if (s.type === 'opposition') {
+          contentHtml = `
+            <div class="opposition-container">
+              <div class="opposition-headers">
+                <div></div>
+                <div class="opp-col-title opp-title-a">${s.side_a_title}</div>
+                <div class="opp-col-title opp-title-b">${s.side_b_title}</div>
+              </div>
+              ${s.dimensions.map(d => `
+                <div class="opposition-row">
+                  <div class="opp-dim-label">${d.name}</div>
+                  <div class="opp-dim-content">${d.side_a}</div>
+                  <div class="opp-dim-content focus">${d.side_b}</div>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        } else if (s.type === 'one_to_one') {
+          contentHtml = `
+            <div class="one-to-one-grid">
+              <div class="chart-area">
+                <div style="font-weight: 800; font-size: 15px; color: var(--slide-primary); margin-bottom: 8px;">業務類型與邊際效益佔比</div>
+                ${s.bars.map(b => `
+                  <div class="bar-row">
+                    <div class="bar-info">
+                      <span>${b.label}</span>
+                      <span>${b.display}</span>
+                    </div>
+                    <div class="bar-track">
+                      <div class="bar-fill ${b.highlight ? 'highlight' : ''}" style="width: ${b.value}%"></div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+              <div class="callout-box">
+                <div class="callout-title">${s.callout_title}</div>
+                <ul class="callout-list">
+                  ${s.callout_points.map(p => `<li>• ${p}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+          `;
+        } else if (s.type === 'combined_tree') {
+          contentHtml = `
+            <div class="tree-container">
+              <div class="tree-top">${s.top_conclusion}</div>
+              <div class="tree-branches">
+                <div class="tree-branch">
+                  <div class="tree-branch-title">${s.left_branch_title}</div>
+                  <ul class="tree-facts">
+                    ${s.left_branch_points.map(p => `<li>• ${p}</li>`).join('')}
+                  </ul>
+                </div>
+                <div class="tree-branch">
+                  <div class="tree-branch-title">${s.right_branch_title}</div>
+                  <ul class="tree-facts">
+                    ${s.right_branch_points.map(p => `<li>• ${p}</li>`).join('')}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          `;
+        } else if (s.type === 'chain') {
+          contentHtml = `
+            <div class="chain-grid">
+              ${s.steps.map(st => `
+                <div class="chain-card">
+                  <span class="chain-order">${st.order}</span>
+                  <div class="chain-title">${st.title}</div>
+                  <div class="chain-desc">${st.desc}</div>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        } else if (s.type === 'comparison') {
+          contentHtml = `
+            <div class="comp-grid">
+              <div class="comp-box">
+                <div class="comp-title">${s.left_title}</div>
+                <ul class="card-list" style="margin-top: 10px;">
+                  ${s.left_points.map(p => `<li>${p}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="comp-box center">
+                <div class="comp-title" style="color: var(--slide-accent);">${s.common_title}</div>
+                <ul class="card-list" style="margin-top: 10px;">
+                  ${s.common_points.map(p => `<li>${p}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="comp-box">
+                <div class="comp-title">${s.right_title}</div>
+                <ul class="card-list" style="margin-top: 10px;">
+                  ${s.right_points.map(p => `<li>${p}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+          `;
+        } else if (s.type === 'mckinsey_flow') {
+          contentHtml = `
+            <table class="mckinsey-table">
+              <thead>
+                <tr>
+                  <th style="width: 140px; background: transparent; color: var(--slide-primary); text-align: left;">核心維度</th>
+                  ${s.stages.map(st => `<th>${st}</th>`).join('')}
+                </tr>
+              </thead>
+              <tbody>
+                ${s.rows.map(r => `
+                  <tr>
+                    <td class="dim">${r.dimension}</td>
+                    ${r.cells.map(c => `<td class="cell">${c}</td>`).join('')}
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          `;
+        } else if (s.type === 'bcg_matrix') {
+          contentHtml = `
+            <div class="bcg-grid">
+              ${s.quadrants.map(q => `
+                <div class="bcg-quad ${q.highlight ? 'focus' : ''}">
+                  <div class="bcg-quad-title">${q.title}</div>
+                  <div class="bcg-quad-desc">${q.desc}</div>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        bodyHtml = `
+          <header class="slide-header">
+            <div class="slide-meta-row">
+              <span class="slide-tags">${s.category || '策略分析'} ｜ ${s.layout_label || ''}</span>
+              <span class="slide-page-badge">${index + 1} / ${slidesData.length}</span>
+            </div>
+            <h2 class="slide-title">${s.conclusion_title || ''}</h2>
+            <div class="slide-subtitle">${s.subtitle || ''}</div>
+          </header>
+          <div class="slide-body">
+            ${contentHtml}
+          </div>
+          <footer class="slide-footer">
+            <span>${s.footer || 'Source: Dan Sullivan & Dr. Benjamin Hardy《10倍成長思維》'}</span>
+            <span>Zero-Noise Consulting Engine</span>
+          </footer>
+        `;
+      }
+
+      box.innerHTML = bodyHtml;
+
+      // Update Controls
+      document.getElementById('pageIndicator').innerText = `${index + 1} / ${slidesData.length}`;
+      document.getElementById('prevBtn').disabled = (index === 0);
+      document.getElementById('nextBtn').disabled = (index === slidesData.length - 1);
+
+      // Update Dots
+      const dotsBox = document.getElementById('progressDots');
+      dotsBox.innerHTML = slidesData.map((_, i) => `
+        <div class="dot ${i === index ? 'active' : ''}" onclick="goToSlide(${i})" title="Slide ${i+1}"></div>
+      `).join('');
+
+      // Update Speaker Notes
+      const notes = s.speaker_notes || {};
+      document.getElementById('notesContent').innerHTML = `
+        <div class="note-sec conc">
+          <div class="note-label">① 本頁主張 (Conclusion)</div>
+          <div>${notes.conclusion || '無演講備忘'}</div>
+        </div>
+        <div class="note-sec exp">
+          <div class="note-label">② 補充說明 (Explanation)</div>
+          <div>${notes.explanation || '依圖表事實說明'}</div>
+        </div>
+        <div class="note-sec trans">
+          <div class="note-label">③ 下頁轉場 (Transition)</div>
+          <div>${notes.transition || '進入下一頁'}</div>
+        </div>
+      `;
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        renderSlide(currentSlide);
+      }
+    }
+
+    function nextSlide() {
+      if (currentSlide < slidesData.length - 1) {
+        currentSlide++;
+        renderSlide(currentSlide);
+      }
+    }
+
+    function goToSlide(idx) {
+      currentSlide = idx;
+      renderSlide(currentSlide);
+    }
+
+    function toggleNotes() {
+      const drawer = document.getElementById('notesDrawer');
+      const btn = document.getElementById('notesToggleBtn');
+      drawer.classList.toggle('open');
+      btn.classList.toggle('active');
+    }
+
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    // Keyboard support
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        prevSlide();
+      } else if (e.key === 'n' || e.key === 'N') {
+        toggleNotes();
+      } else if (e.key === 'f' || e.key === 'F') {
+        toggleFullScreen();
+      }
+    });
+
+    // Initialize
+    renderSlide(0);
+  </script>
+</body>
+</html>

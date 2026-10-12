@@ -1,0 +1,155 @@
+[
+  {
+    "id": "10x-thinking",
+    "code": "#002",
+    "title": "10倍成長思維：丹．蘇利文 & 班傑明．哈迪",
+    "originalTitle": "10x Is Easier Than 2x: How World-Class Entrepreneurs Achieve More by Doing Less",
+    "category": "策略思考 / 個人成長",
+    "categoryKey": "strategy",
+    "tags": ["成長思維", "時間管理", "帕雷托法則", "自我管理", "WhoNotHow", "獨特能力", "無雜訊簡報"],
+    "author": "丹·蘇利文 (Dan Sullivan) ＆ 班傑明·哈迪 (Dr. Benjamin Hardy)",
+    "date": "2026-10-12",
+    "status": "已完成",
+    "statusBadge": "精華簡報上線",
+    "hasSlides": true,
+    "slidesUrl": "deck-10x.html",
+    "pptxFile": "assets/10倍成長思維_無雜訊顧問簡報.pptx",
+    "slideCount": 12,
+    "rating": "5.0 ★★★★★",
+    "summary": "10倍躍遷在數學與系統動力學上遠比2倍成長更簡單。2倍是過去的線性延續，本質是加法與蠻力，保留80%次要雜務導致過勞；10倍則是質變與減法，逼迫大腦打破既有假設，果斷砍除80%次要努力，極致聚焦20%獨特能力，並搭配年度150天自由日與自驅團隊。",
+    "coreThesis": "十倍不是更沉重的負擔，而是一面強力過濾器：它能瞬間過濾掉90%無關緊要的人事物，逼迫你以減法創造質變。",
+    "frameworks": [
+      {
+        "name": "10x vs. 2x 質變對立模型",
+        "desc": "2倍依賴過去的加法蠻力（Doing more of the same）；10倍依賴未來的質變減法（Doing less, achieving exponential）。"
+      },
+      {
+        "name": "帕雷托 80/20 遞迴迭代",
+        "desc": "現在的 20% 核心槓桿，在進入下一個 10 倍階段時將退化為新的 80% 雜務，必須再次果斷修剪。"
+      },
+      {
+        "name": "Want vs. Need 心態躍遷樹",
+        "desc": "從缺乏承諾的「想要」升級為不可妥協的「非要不可」，淘汰最低標準，結盟英雄同盟。"
+      },
+      {
+        "name": "未來自我的動態引領 (Future Self)",
+        "desc": "解綁過去經驗的匱乏感，由三年或十年後的未來自我倒推當下決策，極致放大「獨特能力 (Unique Ability)」。"
+      },
+      {
+        "name": "創業家三大時間系統 (Strategic Coach Time System)",
+        "desc": "每年 150 天徹底斷聯休假的「自由日」＋ 核心產出的「專注日」＋ 吸收雜務的「緩衝日」。休假是高產出的先決條件！"
+      },
+      {
+        "name": "自我管理團隊與 4 級創業家 (Who Not How)",
+        "desc": "從單打獨鬥 ➔ 任務委派 ➔ 自我管理團隊 ➔ 自驅擴展組織。領導者只定義 Why & What，優秀團隊自主解題 How。"
+      }
+    ],
+    "actionItems": [
+      "盤點當前工作與生活項目的 80/20 分佈，列出 3 項應立即修剪或終止的次要事務",
+      "在年度行事曆中試行「創業家時間系統」：預先排定下一季度連續 3 天完全斷聯的自由日",
+      "面對新任務時落實「Who Not How」反射思維：先問「誰是最佳人選」而非「我如何自己做完」",
+      "建立未來自我的動態標準，以未來 10 倍目標過濾掉 90% 不必要的社交與碎片化邀約"
+    ]
+  },
+  {
+    "id": "compression-learning",
+    "code": "#001",
+    "title": "壓縮學習：樞紐優先的學習框架（北大團隊研究）",
+    "originalTitle": "Compressive learning enables higher-order network structure to enhance human knowledge acquisition",
+    "category": "認知科學 / 學習方法論",
+    "categoryKey": "cognition",
+    "tags": ["學習方法", "認知科學", "知識管理", "樞紐優先", "除法學習", "圖論建模"],
+    "author": "北京大學聯合團隊（發表於《自然·通訊》Nature Communications）",
+    "date": "2026-08-06",
+    "status": "已完成",
+    "statusBadge": "知識庫收錄",
+    "hasSlides": false,
+    "slidesUrl": "#",
+    "pptxFile": "",
+    "slideCount": 0,
+    "rating": "4.9 ★★★★★",
+    "summary": "高手與普通人的差距不在記性好壞，而在於是否擅長「壓縮」——把全量資訊轉化為關鍵信號。實驗證實：異質性強、有明顯樞紐的網路比均勻網路更容易被大腦掌握，且「樞紐優先 (HubToLeaf)」順序顯著優於邊緣優先或隨機遊走，初期形成穩定資訊框架後，新資訊認知負擔大幅降低。",
+    "coreThesis": "學習更像是做除法與編碼：先搭建四梁八柱核心樞紐，之後新資訊只需判斷掛在何處，資訊越多框架越穩固而非越亂。",
+    "frameworks": [
+      {
+        "name": "HubToLeaf 樞紐優先學習法",
+        "desc": "花 20 分鐘找出領域 3-5 個核心概念（目錄或維基開頭），先理解樞紐關係，再填充細節。"
+      },
+      {
+        "name": "除法編碼模型",
+        "desc": "以大腦腦磁圖為證：高手不是硬背全量數據，而是將複雜網路壓縮至核心骨架。"
+      },
+      {
+        "name": "轉述測試 (費曼技巧深化)",
+        "desc": "用 3-5 句話講給外行人聽，輸出不只是成果展示，而是暴露認知盲點的必要檢驗。"
+      }
+    ],
+    "actionItems": [
+      "為近期正在學的一個領域，花 20 分鐘列出 3-5 個「樞紐概念」作為筆記骨架",
+      "在知識庫條目寫入流程中加入「轉述測試」步驟（檢驗是否能化繁為簡）",
+      "評估既有零散筆記是否需要建立樞紐索引層，實現少而精的脈絡複利"
+    ]
+  },
+  {
+    "id": "wan-thinking-tools",
+    "code": "#003",
+    "title": "萬維鋼·現代思維工具 100 講",
+    "originalTitle": "100 Modern Thinking Tools for High Performers",
+    "category": "思維模型 / 決策科學",
+    "categoryKey": "mental-models",
+    "tags": ["思維工具", "理性決策", "複雜系統", "概率思維", "擴展規劃中"],
+    "author": "萬維鋼（物理學家、科普作家）",
+    "date": "2026-11",
+    "status": "規劃中",
+    "statusBadge": "即將推出",
+    "hasSlides": false,
+    "slidesUrl": "#",
+    "pptxFile": "",
+    "slideCount": 0,
+    "rating": "4.9 ★★★★★",
+    "summary": "涵蓋科學決策、批判性思維、博弈論、複雜系統與概率論的 100 個現代菁英必備心智工具箱，協助打破直覺偏誤，在不確定時代做出高質量決策。",
+    "coreThesis": "智識分子的武器不是經驗主義，而是由頂尖科學與哲學提煉出的模組化思維工具。",
+    "frameworks": [
+      {
+        "name": "貝氏更新決策模型",
+        "desc": "根據新證據動態修正先驗概率，避免非黑即白的僵化偏執。"
+      },
+      {
+        "name": "反脆弱性槓鈴策略",
+        "desc": "一端極致安全，一端承擔微小風險博取巨大非對稱收益。"
+      }
+    ],
+    "actionItems": [
+      "依據樞紐優先框架，建立 100 講之頂層分類索引矩陣"
+    ]
+  },
+  {
+    "id": "fandeng-frameworks",
+    "code": "#004",
+    "title": "樊登·高維成長課：28天重塑思維框架",
+    "originalTitle": "High-Dimensional Growth: 28 Days Mental Framework Reconstruction",
+    "category": "領導認知 / 組織心理",
+    "categoryKey": "leadership",
+    "tags": ["高維思維", "領導力", "心智重構", "反脆弱", "擴展規劃中"],
+    "author": "樊登（讀書創始人）",
+    "date": "2026-11",
+    "status": "規劃中",
+    "statusBadge": "即將推出",
+    "hasSlides": false,
+    "slidesUrl": "#",
+    "pptxFile": "",
+    "slideCount": 0,
+    "rating": "4.8 ★★★★★",
+    "summary": "以 28 天為週期，從第一性原理、系統動力學、溝通引導到組織賦能，全面升級個人的認知維度與解題半徑。",
+    "coreThesis": "低維度的無解難題，往往在高一個維度上看只是一道極其自然的證明題。",
+    "frameworks": [
+      {
+        "name": "第一性原理下鑽法",
+        "desc": "剝離類比與習慣，下鑽至最底層物理事實重新合成策略。"
+      }
+    ],
+    "actionItems": [
+      "梳理高維解題模型，對接個人成長 PDCA 實踐清單"
+    ]
+  }
+]
